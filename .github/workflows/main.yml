@@ -18,7 +18,7 @@ jobs:
 
       - name: Hit external API and print HTTP status and response
         run: |
-          response=$(curl -s -w "%{http_code}" -o response_body.txt https://api.restful-api.dev/objects/7)
+          response=$(curl -H "at: ZXlKaGJHY2lPaUpJVXpJMU5pSXNJbXRwWkNJNklqRWlMQ0owZVhBaU9pSktWMVFpZlEuZXlKdWFXUjRJam9pWm1JeU5ETTJNR0l0T1RBM1ppMHhNV1ZtTFRnNU1UTXRPVEkwWVdWa1pUUmxOR0V4SWl3aVkybGtlQ0k2SW0xNWJuUnlZUzB3TW1RM1pHVmpOUzA0WVRBd0xUUmpOelF0T1dObU55MDVaRFl5WkdKbFlUVmxOakVpTENKaGNIQk9ZVzFsSWpvaWJYbHVkSEpoSWl3aWMzUnZjbVZKWkNJNklqSXlPVGNpTENKbGVIQWlPakUzTkRVeE5UZzBPRElzSW1semN5STZJa2xFUlVFaWZRLjZaV2tMTEdNaDFfeFctZVMxUFE1c2dLclNKckNRakQtZklXODZCd2Q1Z3M=" https://api.myntra.com/v2/product/10655942 -s -o response_body.txt -w "%{http_code}")
           echo "HTTP Status: $response"
           echo "Response Body:"
           cat response_body.txt
