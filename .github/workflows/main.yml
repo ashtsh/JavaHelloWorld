@@ -3,7 +3,7 @@ name: CI for github-action-poc
 on:
   push:
     branches:
-      - github-action-poc
+      - main
 
 jobs:
   build:
