@@ -15,3 +15,8 @@ jobs:
 
       - name: Run a one-line script
         run: echo "Hello, world!"
+
+      - name: Hit external API and print HTTP status
+        run: |
+          response=$(curl -s -o /dev/null -w "%{http_code}" https://api.restful-api.dev/objects/7)
+          echo "HTTP Status: $response"
